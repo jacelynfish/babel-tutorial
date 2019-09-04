@@ -1,0 +1,32 @@
+{
+  "name": "babel_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf build && ./node_modules/.bin/babel src -d build",
+    "build:presetEnvDefault": "./node_modules/.bin/babel src/index.js -o build/presetEnvDefault.js --no-babelrc --config-file=./config/presetEnvDefault.js",
+    "build:presetEnvTransformRuntime3": "./node_modules/.bin/babel src/index.js -o build/presetEnvTransformRuntime3.js --no-babelrc --config-file=./config/presetEnvTransformRuntime3.js",
+    "build:presetEnvUseBuiltInCore3": "./node_modules/.bin/babel src/index.js -o build/presetEnvUseBuiltInCore3.js --no-babelrc --config-file=./config/presetEnvUseBuiltInCore3.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/runtime-corejs3": "^7.5.5",
+    "core-js": "3"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not ie <= 10",
+    "not dead"
+  ]
+}
