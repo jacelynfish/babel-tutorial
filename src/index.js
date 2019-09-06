@@ -1,5 +1,3 @@
-// import 'core-js'
-
 async function async1() {
   let one = await Promise.resolve(1)
   console.log(one)
@@ -8,6 +6,3 @@ async function async1() {
 async1.then(one => {
   console.log('one again')
 })
-
-
-// let a = () => Object.assign({}, {b : 1})
